@@ -1,0 +1,71 @@
+{
+    "openapi": "3.0.3",
+    "info":{
+        "title":"User API",
+        "description":"User API",
+        "version":"1.0.0"
+    },
+    "servers":[
+        {
+            "url": "http://localhost:8000"
+        }
+    ],
+    "paths":{
+        "/api/users":{
+            "post":{
+                "description":"Register a new user",
+                "requestBody":{
+                    "content":{
+                        "application/json":{
+                            "examples":{
+                                "khannedy":{
+                                    "description":"Register user khannedy",
+                                    "value":{
+                                        "username":"khannedy",
+                                        "password":"rahasia",
+                                        "name":"Eko Kurniawan Khannedy"
+
+                                    }
+                                }
+                            },
+                            "schema":{
+                                "type":"object",
+                                "properties":{
+                                    "username":{
+                                        "type":"string"
+                                    },
+                                    "password":{
+                                        "type":"string"
+                                    },
+                                    "name":{
+                                        "type":"string"
+                                    }
+                                    }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/users/login":{
+            "post":{
+                "description":"Login a user"
+            }
+        },
+        "/api/users/current":{
+            "get":{
+                "description":"Get Current User"
+            },
+            "patch":{
+                "description":"Update Current User"
+            },
+            "/api/users/logout":{
+                "delete":{
+                    "description":"Logout a user"
+                }
+            }
+        }
+    }
+}

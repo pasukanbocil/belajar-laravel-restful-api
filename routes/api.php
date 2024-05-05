@@ -22,9 +22,9 @@ Route::get('users/{id}', function ($id) {
 
 });
 
-// Route::get('users', function () {
+Route::get('users', function () {
 
-// });
+});
 
 // Route::post('users', function () {
 

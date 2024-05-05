@@ -26,9 +26,9 @@ Route::get('users', function () {
 
 });
 
-// Route::post('users', function () {
+Route::post('users', function () {
 
-// });
+});
 
 // Route::put('users/{id}', function ($id) {
 
